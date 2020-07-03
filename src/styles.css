@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: rgb(27, 27, 29);
+}
+
+h2 {
+  color: white;
+}
+
+hr {
+  background: white;
+}
+
+.container-home {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.container-search {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.container-movie {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.img-card {
+  cursor: pointer;
+}
+
+.container-img-card {
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.container-img-card img:hover {
+  opacity: 90%;
+  -webkit-transition:all .9s ease;
+  -webkit-transform:scale(1.25);
+  transform:scale(1.25);
+}
+
+
+
+/* div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+} */

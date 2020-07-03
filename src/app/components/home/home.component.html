@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4 container-home animate__animated animate__fadeIn animate__faster">
+  <!-- <div class="jumbotron">
+    <h1 class="display-4">Bienvenidos a Peliculas App GO!</h1>
+    <p class="lead">Esta es una aplicación de películas para reforzar todo lo aprendido con Angular hasta ahora.</p>
+    <hr class="my-4">
+    <p>Pueden visitar mi Github para revisar todos los proyectos subidos hasta el momento.</p>
+    <a class="btn btn-primary btn-lg"
+       href="https://github.com/FrancescoGO"
+       target="_blank"
+       role="button">
+       <i class="fab fa-github"></i>
+       GitHub
+    </a>
+  </div> -->
+
+
+  <h2>Películas en Cartelera</h2>
+  <hr>
+  <app-loading *ngIf="loading"></app-loading>
+  <div *ngIf="!loading" class="row row-cols-1 row-cols-md-4 mt-4 mb-4">
+    <app-card (peliculaSeleccionada)="verPelicula($event)" [pelicula]="peCartelera" *ngFor="let peCartelera of peliculasCartelera"></app-card>
+  </div>
+
+  <h2>Películas Populares</h2>
+  <hr>
+  <app-loading *ngIf="loading"></app-loading>
+  <div *ngIf="!loading" class="row row-cols-1 row-cols-md-4 mt-4 mb-4">
+    <app-card (peliculaSeleccionada)="verPelicula($event)" [pelicula]="pePopulares" *ngFor="let pePopulares of peliculasPopulares"></app-card>
+  </div>
+
+  <h2>Películas para los niños</h2>
+  <hr>
+  <app-loading *ngIf="loading"></app-loading>
+  <div *ngIf="!loading" class="row row-cols-1 row-cols-md-4 mt-4 mb-4">
+    <app-card (peliculaSeleccionada)="verPelicula($event)" [pelicula]="peNinios" *ngFor="let peNinios of peliculasNinios"></app-card>
+  </div>
+
+</div>
+
